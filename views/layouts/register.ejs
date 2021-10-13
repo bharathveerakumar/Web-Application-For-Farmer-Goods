@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/register.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+    <title> Register </title>
+</head>
+
+<body>
+    <div class="register">
+        <form action="register1" method="POST" enctype="multipart/form-data">
+            <h2>REGISTER</h2>
+            <label for="username">NAME</label>
+            <input type="text" name="name1" id="username" placeholder="Enter Your Name" required>
+            <label for="password">PASSWORD</label>
+            <input type="password" name="password" id="password" placeholder="Enter Your Password" required>
+            <label for="cpassword">CONFIRM PASSWORD</label>
+            <input type="password" name="cpassword" id="cpassword" placeholder="Confirm Your Password" required>
+            <label for="phone">MOBILE NUMBER</label>
+            <input type="number" name="phone" id="phone" placeholder="Enter Your Phone number" required>
+            <label for="images">Upload Your Profile Photo</label>
+            <input type="file" name="images" id="images" required>
+            <button type="submit">Submit</button>
+            <h3>Already Registered? <a href="login">LOG IN</a></h3>
+        </form>
+        <h1><%= message %></h1>
+    </div>
+    <script src="Javascript/app.js"></script>
+</body>
+
+</html>

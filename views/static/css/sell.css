@@ -1,0 +1,190 @@
+/* For navigation Bar */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+li{
+    position: relative;
+    list-style-type: none;
+    padding: 20px;
+    letter-spacing: 3px;
+}
+li::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    transition: 1s;
+    z-index: -1;
+    color: white;
+    border-radius: 10px;
+}
+li:hover::before{
+    background-color: greenyellow;
+    width: 100%;
+}
+a{
+    text-decoration: none;
+    color: rgb(1, 80, 1);
+}
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgb(250, 253, 209); */
+    font-family: 'Fjalla One', sans-serif;
+}
+nav{
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+    height: 30%;
+    z-index: 100000;
+    background-color: white;
+}
+nav{
+    box-shadow: 0 1px 30px 0px black;
+    transition: box-shadow 1s;
+}
+.titlecont .title{
+    letter-spacing: 5px;
+    font-size: 35px;
+}
+.slogan{
+    font-weight: lighter;
+}
+.titlecont{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: green;
+    font-family: 'Dancing Script', cursive;
+    z-index: 999;
+}
+.logo{
+    width: 50px;
+    height: 60px;
+    margin-right: 10px;
+}
+.m{
+    width: 30px;
+    height: 6px;
+    background-color: black;
+    margin: 5px;
+}
+.menuicon{
+    display: none;
+}
+.opt{
+    width: 100vw;
+    height: 350px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    transition: 2s;
+}
+.pages{
+    display: flex;
+}
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+.sell{
+    margin-top: 30px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.sell h2{
+    margin-top: 10px;
+    text-align: center;
+}
+.sell form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+.sell input, .sell label, .sell button{
+    margin-top: 10px;
+}
+.sell input{
+    width: 70%;
+    min-width: 250px;
+    border: 2px solid black;
+    height: 50px;
+    border-radius: 30px;
+    padding: 15px;
+    text-align: center;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 15px;
+}
+.sell button{
+    margin-top: 15px;
+    border: none;
+    background-color: greenyellow;
+    padding: 15px;
+    border-radius: 20px;
+    font-size: 17px;
+    font-weight: 500;
+}
+.sell select{
+    width: 70%;
+    min-width: 250px;
+    border: 2px solid black;
+    height: 50px;
+    border-radius: 30px;
+    padding: 15px;
+    text-align: center;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+
+@media (max-width:800px){
+    nav{
+        padding: 10px;
+        flex-wrap: wrap;
+    }
+    .menuicon{
+        display: block;
+    }
+    .titlecont .title{
+        letter-spacing: 1px;
+        font-size: 25px;
+    }
+    .hideul{
+        display: none;
+    }
+}

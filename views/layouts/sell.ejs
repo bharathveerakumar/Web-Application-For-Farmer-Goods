@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/sell.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+    <title>SELL</title>
+</head>
+
+<body>
+    <!-- navigation bar -->
+    <nav>
+        <div class="titlecont">
+            <img src="logo.png" alt="LOGO" class="logo">
+            <div class="titledata">
+                <h1 class="title">EXPRESS AGRI</h1>
+                <h3 class="slogan">The Farmer's Portal</h3>
+            </div>
+        </div>
+        <ul class="hideul">
+            <li><a href="/">PRODUCTS</a></li>
+            <li><a href="aboutus">ABOUT US</a></li>
+            <li><a href="sell">SELL</a></li>
+            <li><a href="<%= name1 %>"> <%= name %> </a></li>
+        </ul>
+        <div class="menuicon">
+            <div class="m"></div>
+            <div class="m"></div>
+            <div class="m"></div>
+        </div>
+        <ul class="opt">
+            <li><a href="">PRODUCTS</a></li>
+            <li><a href="aboutus">ABOUT US</a></li>
+            <li><a href="sell">SELL</a></li>
+            <li><a href="<%= name1 %>"> <%= name %> </a></li>
+        </ul>
+    </nav>
+    <main>
+        <img src="far.jpg" alt="farmclipart">
+        <div class="sell">
+            <h2>Hi, <%= name %>!!!</h2>
+            <h2>Do you want to Sell Products from your Farm?</h2>
+            <h2>Then, Here is the Place, Enter the Product details below</h2>
+            <form action="sell" method="post" enctype="multipart/form-data">
+                <label for="cate">Select Your Category</label>
+                <select name="category" id="cate">
+                    <option value="Vegetable">Vegetable</option>
+                    <option value="Fruits">Fruits</option>
+                    <option value="Dairy">Dairy</option>
+                </select>
+                <label for="name">Product Name</label>
+                <input type="text" name="productname" id="name" required placeholder="Product Name">
+                <label for="price">Price</label>
+                <input type="number" name="price" id="price" required placeholder="Product Price per kg">
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" name="quantity" placeholder="Quantity in kg">
+                <label for="photo">Upload the Product Photo</label>
+                <input type="file" name="images" id="photo" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </main>
+    <script src="Javascript/app.js"></script>
+</body>
+</html>

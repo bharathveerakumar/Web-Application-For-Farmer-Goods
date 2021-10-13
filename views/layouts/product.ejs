@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/product.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+    <title>Farmer's Portal</title>
+</head>
+
+<body>
+
+    <!-- navigation bar -->
+    <nav>
+        <div class="titlecont">
+            <img src="logo.png" alt="LOGO" class="logo">
+            <div class="titledata">
+                <h1 class="title">EXPRESS AGRI</h1>
+                <h3 class="slogan">The Farmer's Portal</h3>
+            </div>
+        </div>
+        <ul class="hideul">
+            <li><a href="/">PRODUCTS</a></li>
+            <li><a href="aboutus">ABOUT US</a></li>
+            <li><a href="sell">SELL</a></li>
+            <li><a href="<%= name1 %>"> <%= name %> </a></li>
+        </ul>
+        <div class="menuicon">
+            <div class="m"></div>
+            <div class="m"></div>
+            <div class="m"></div>
+        </div>
+        <ul class="opt">
+            <li><a href="/">PRODUCTS</a></li>
+            <li><a href="aboutus">ABOUT US</a></li>
+            <li><a href="sell">SELL</a></li>
+            <li><a href="<%= name1 %>"> <%= name %> </a></li>
+        </ul>
+    </nav>
+    <div class="row">
+        <div class="column">
+            <h1>Product Details</h1>
+            <img src="data:image/jpg; base64, <%= rows[0].pphoto %>" alt="">
+            <h2><%= rows[0].productname %></h2>
+            <h2><%= rows[0].price %></h2>
+            <h2>Available Quantity : <%= rows[0].quantitty %>/kg</h2>
+            <h2>Payment Method : Cash on Delivery</h2>
+            <input type="text" placeholder="Enter your Address">
+            <a href="placed" class="place">Place Order</a>
+            <h1><%= ordermessage %></h1>
+        </div>
+    </div>
+    <script src="Javascript/app.js"></script>
+    </body>
+</html>

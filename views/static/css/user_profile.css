@@ -1,0 +1,203 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+li{
+    position: relative;
+    list-style-type: none;
+    padding: 20px;
+    letter-spacing: 3px;
+}
+li::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    transition: 1s;
+    z-index: -1;
+    color: white;
+    border-radius: 10px;
+}
+li:hover::before{
+    background-color: greenyellow;
+    width: 100%;
+}
+a{
+    text-decoration: none;
+    color: rgb(1, 80, 1);
+}
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgb(250, 253, 209); */
+    font-family: 'Fjalla One', sans-serif;
+}
+nav{
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+    height: 30%;
+    z-index: 100000;
+    background-color: white;
+}
+nav{
+    box-shadow: 0 1px 30px 0px black;
+    transition: box-shadow 1s;
+}
+.titlecont .title{
+    letter-spacing: 5px;
+    font-size: 35px;
+}
+.slogan{
+    font-weight: lighter;
+}
+.titlecont{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: green;
+    font-family: 'Dancing Script', cursive;
+    z-index: 999;
+}
+.logo{
+    width: 50px;
+    height: 60px;
+    margin-right: 10px;
+}
+.m{
+    width: 30px;
+    height: 6px;
+    background-color: black;
+    margin: 5px;
+}
+.menuicon{
+    display: none;
+}
+.opt{
+    width: 100vw;
+    height: 350px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    transition: 2s;
+}
+.pages{
+    display: flex;
+}
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 70px;
+}
+.usercard{
+    /* width: 60%; */
+    min-width: 60%;
+    max-width: 95%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 1px 1px 10px 1px black;
+    padding: 30px;
+    border-radius: 50px;
+    transition: 1s;
+    margin-bottom: 50px;
+}
+.usercard h1{
+    margin-top: 20px;
+}
+.usercard:hover{
+    box-shadow: 1px 1px 10px 1px red;
+}
+.usercard img{
+    width: 30%;
+    height: 200px;
+    box-shadow: 1px 1px 10px 1px black;
+    border-radius: 30px;
+    transition: 1s;
+}
+.usercard img:hover{
+    box-shadow: 1px 1px 10px 1px green;
+    transform: scale(1.07, 1.07);
+}
+.usercard a{
+    padding: 15px;
+    background-color: greenyellow;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.column1{
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.column2{
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.column2 h2{
+    margin-top: 10px;
+}
+.pro{
+    padding: 15px;
+    border-radius: 15px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    box-shadow: 1px 1px 20px 1px grey;
+}
+
+@media (max-width:800px){
+    nav{
+        padding: 10px;
+        flex-wrap: wrap;
+    }
+    .menuicon{
+        display: block;
+    }
+    .titlecont .title{
+        letter-spacing: 1px;
+        font-size: 25px;
+    }
+    .hideul{
+        display: none;
+    }
+}
